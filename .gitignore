@@ -1,0 +1,8 @@
+/dist/
+.venv
+.github
+pycache/
+__pycache__
+.pytest_cache
+test_data/
+.idea
