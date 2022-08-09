@@ -1,4 +1,5 @@
 import argparse
+from gendiff.generate_diff import generate_diff
 
 
 def main(first_file=None, second_file=None, format_=None):
@@ -15,6 +16,8 @@ def main(first_file=None, second_file=None, format_=None):
     first_file = args.first_file
     second_file = args.second_file
     format_ = args.format
+    diff = generate_diff(first_file=first_file, second_file=second_file,
+                         format_=format_)
 
 
 if __name__ == "__main__":
