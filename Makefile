@@ -23,5 +23,8 @@ selfcheck:
 
 check: selfcheck test lint
 
-build: check
+package-install:
+	python3 -m pip install dist/*.whl
+
+build:
 	poetry build
