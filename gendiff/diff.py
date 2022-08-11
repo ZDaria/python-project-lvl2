@@ -23,25 +23,26 @@ def get_diff(first_file_data: dict, second_file_data: dict) -> dict:
             result.append({
                 'key': key,
                 'value': first_file_data[key],
-                'action': 'removed'
+                'action': 'removed',
             })
         elif key not in first_file_data:
             result.append({
                 'key': key,
                 'value': second_file_data[key],
-                'action': 'added'
+                'action': 'added',
             })
         elif first_file_data[key] == second_file_data[key]:
             result.append({
                 'key': key,
                 'value': second_file_data[key],
-                'action': 'unchanged'
+                'action': 'unchanged',
             })
         elif first_file_data[key] != second_file_data[key]:
             result.append({
                 'key': key,
                 'value': second_file_data[key],
-                'action': 'updated'
+                'action': 'updated',
+                'value_diff': first_file_data[key],
             })
 
     return result
