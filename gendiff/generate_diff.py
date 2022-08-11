@@ -19,8 +19,5 @@ def get_data_from_file(file, _type='json') -> dict:
 def generate_diff(first_file: str, second_file: str, format_: str) -> str:
     data_1 = get_data_from_file(first_file)
     data_2 = get_data_from_file(second_file)
-    print(data_1)
-    print(data_2)
     file_diff = get_diff(data_1, data_2)
-    print(file_diff)
-    return 'ok'
+    return file_diff
